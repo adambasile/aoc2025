@@ -14,6 +14,7 @@ struct Cli {
 }
 
 #[derive(Debug, Eq, PartialEq)]
+#[allow(dead_code)]
 enum FunctionOutput {
     IntPair(i64, i64),
     StringPair(String, String),
