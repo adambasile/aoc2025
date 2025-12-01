@@ -1,3 +1,5 @@
+mod day01;
+
 use clap::Parser;
 use std::fmt::{Display, Formatter};
 use std::fs::File;
@@ -31,6 +33,7 @@ fn main() {
     let lines = read_lines_from_file(args.path);
     let before = Instant::now();
     let day: fn(Vec<String>) -> FunctionOutput = match args.day {
+        1 => day01::day01,
         _ => panic!(),
     };
     println!("{}", day(lines));
