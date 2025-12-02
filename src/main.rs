@@ -1,4 +1,5 @@
 mod day01;
+mod day02;
 
 use clap::Parser;
 use std::fmt::{Display, Formatter};
@@ -35,6 +36,7 @@ fn main() {
     let before = Instant::now();
     let day: fn(Vec<String>) -> FunctionOutput = match args.day {
         1 => day01::day01,
+        2 => day02::day02,
         _ => panic!(),
     };
     println!("{}", day(lines));
